@@ -1,1 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Cookie&family=Courgette&family=Kavoon&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&family=Special+Gothic+Expanded+One&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-logo: "Courgette", cursive;
+
+  --color-background: #f7f8fc;
+  --color-surface: #ffffff;
+  --color-heading: #1b163f;
+  --color-body: #55556d;
+  --color-muted: #8b8ba7;
+  --color-border: #ececf4;
+
+  --color-primary: #6c4ef6;
+  --color-primary-hover: #5a3deb;
+  --color-primary-glow: #9d7cff;
+  --color-secondary: #ff8c42;
+  --color-accent-blue: #60a5fa;
+  --color-success: #10b981;
+  --color-warning: #facc15;
+
+  --radius-card: 24px;
+  --radius-btn: 16px;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 15px 40px rgba(27, 22, 63, 0.06);
+  --shadow-card: 0 18px 45px rgba(20, 20, 40, 0.08);
+  --shadow-glow: 0 15px 35px rgba(108, 78, 246, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-background);
+  color: var(--color-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
