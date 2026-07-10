@@ -6,6 +6,8 @@ import About from '../components/sections/About'
 import Certifications from '../components/sections/Certifications'
 import Contact from '../components/sections/Contact'
 import FAQ from '../components/sections/FAQ'
+import Testimonials from '../components/sections/Testimonials'
+import LearningProcess from '../components/sections/LearningProcess'
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
       <Courses />
       <About />
       <Certifications />
+      <LearningProcess />
+      <Testimonials />
       <FAQ />
       <Contact />
       <Footer />
