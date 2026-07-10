@@ -5,6 +5,7 @@ import Courses from '../components/sections/Courses'
 import About from '../components/sections/About'
 import Certifications from '../components/sections/Certifications'
 import Contact from '../components/sections/Contact'
+import FAQ from '../components/sections/FAQ'
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Courses />
       <About />
       <Certifications />
+      <FAQ />
       <Contact />
       <Footer />
     </div>
