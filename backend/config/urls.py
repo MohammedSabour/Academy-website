@@ -16,7 +16,33 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+
+from apps.accounts.views import LoginView, CurrentUserView 
+from apps.courses.views import CourseListView, CourseDetailView, LanguageListView
+from apps.contact.views import ContactView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
+    # Courses APIs
+    path("api/languages/", LanguageListView.as_view(), name="languages"),
+    
+    path('api/courses/',CourseListView.as_view(), name='courses' ),
+    path("api/courses/<int:pk>/", CourseDetailView.as_view(), name="course-detail"),
+    
+    # Contact APIs
+    path("api/contact/", ContactView.as_view(), name="contact"),
+    
+    # Teacher APIs
+    
+    
+    # Auth APIs
+    path('api/login/',LoginView.as_view(), name='login'),
+    path('api/me/', CurrentUserView.as_view(), name='user'),
 ]
+if settings.DEBUG: urlpatterns += static(
+        settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT,
+    )
